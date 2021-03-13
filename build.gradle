@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+group 'jb_movile'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    // Libreria de Appium
+    implementation group: 'io.appium', name: 'java-client', version: '7.4.1'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    // Cucumber
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '6.10.1'
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '6.10.1'
+    //Reportes
+}
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+// gradle cucumber -Ptestsuite=@Calculadora
+// gradle cucumber -Ptestsuite="@Calculadora or @Contacto"
+task cucumber() {
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = ['--plugin', 'pretty', '--glue', 'runner', 'src/test/resources','--tags']+[testsuite]
+        }
+    }
+}

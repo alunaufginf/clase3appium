@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="basicAppium.BasicContactManager" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-06T18:11:00" hostname="DESKTOP-D84IJ4P" time="275.616">
+  <properties/>
+  <testcase name="verify_contact_is_added" classname="basicAppium.BasicContactManager" time="275.616"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[mar 06, 2021 1:41:20 PM io.appium.java_client.remote.AppiumCommandExecutor$1 lambda$0
+INFORMACIÓN: Detected dialect: W3C
+]]></system-err>
+</testsuite>

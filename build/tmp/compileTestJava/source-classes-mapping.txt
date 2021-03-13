@@ -1,0 +1,14 @@
+runner/MyStepContact.java
+ runner.MyStepContact
+runner/MyStepdefs.java
+ runner.MyStepdefs
+runner/Runner.java
+ runner.Runner
+basicAppium/BasicAppiumTest.java
+ basicAppium.BasicAppiumTest
+runner/MyStepCalculadora.java
+ runner.MyStepCalculadora
+basicAppium/BasicAppiumTest2.java
+ basicAppium.BasicAppiumTest2
+basicAppium/BasicContactManager.java
+ basicAppium.BasicContactManager
